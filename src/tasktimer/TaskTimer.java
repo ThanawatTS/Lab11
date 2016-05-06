@@ -61,11 +61,12 @@ public class TaskTimer
     //--
     
     public static void execAndPrint(Runnable task){
+    	StopWatch stopwatch = new StopWatch();
     	out.println(task);
-    	//.start();
+    	stopwatch.start();
     	task.run();
-    	//.stop();
-    	//out.printf("Elapsed time is %f sec\n", //);
+    	stopwatch.stop();
+    	out.printf("Elapsed time is %f sec\n",stopwatch.getElapsed() );
     }
         
         

@@ -19,7 +19,7 @@ public class Task6 implements Runnable {
 	            return;
 	        }
 	        
-	        out.println();
+	        
 	        long starttime = System.nanoTime();
 	        StringBuilder result = new StringBuilder();
 	        String word = null;
@@ -32,7 +32,7 @@ public class Task6 implements Runnable {
 	        } catch(IOException ioe) { System.out.println( ioe.getMessage() ); }
 	        System.out.printf("Done appending %d words to StringBuilder.\n", count);
 	        long stoptime = System.nanoTime();
-	        out.printf("Elapsed time is %f sec\n",(stoptime - starttime)*1.0E-9 );
+	     
 	    }	
 	
 	

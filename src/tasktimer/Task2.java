@@ -35,7 +35,7 @@ public class Task2 implements Runnable{
 	            try { br.close(); } catch (Exception ex) { /* ignore it */ }
 	        }
 	        long stoptime = System.nanoTime();
-	        out.printf("Elapsed time is %f sec\n",(stoptime - starttime)*1.0E-9 );
+	        
 	}
 	public String toString(){
 		return "Starting task: read words using BufferedReader.readLine() with a loop";

@@ -44,7 +44,7 @@ public class Task4 implements Runnable {
         out.printf("Average length of %,d words is %.2f\n", count, averageLength );
             
         long stoptime = System.nanoTime();
-        out.printf("Elapsed time is %f sec\n",(stoptime - starttime)*1.0E-9 );  
+          
     }
 	
 	 public String toString() {

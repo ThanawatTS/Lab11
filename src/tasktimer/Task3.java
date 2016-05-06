@@ -41,7 +41,7 @@ public class Task3 implements Runnable{
                 counter.getCount(), counter.average() );
             
         long stoptime = System.nanoTime();
-        out.printf("Elapsed time is %f sec\n",(stoptime - starttime)*1.0E-9 );
+       
         
 	}
 	public String toString(){
