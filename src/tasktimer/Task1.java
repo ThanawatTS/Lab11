@@ -5,13 +5,16 @@ import static java.lang.System.out;
 import java.util.Scanner;
 
 public class Task1 implements Runnable{
-
+	
+	Scanner in;
+	public Task1(){
+		in = new Scanner(Dictionary.getWordsAsStram());
+	}
 	@Override
 	public void run(){
-		Scanner in = new Scanner(Dictionary.getWordsAsStram());
+  
         
         
-        long starttime = System.nanoTime();
         // perform the task
         int count = 0;
         long totalsize = 0;
@@ -21,7 +24,7 @@ public class Task1 implements Runnable{
             count++;
         }
         double averageLength = ((double)totalsize)/(count>0 ? count : 1);
-        long stoptime = System.nanoTime();
+        
         out.printf("Average length of %,d words is %.2f\n", count, averageLength);
 		
 	}

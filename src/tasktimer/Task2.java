@@ -7,16 +7,21 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Task2 implements Runnable{
-	public void run(){
-		  BufferedReader br = null;
+	BufferedReader br;
+	
+	public Task2(){
+		 br = null;
 	        try {
 	            br = new BufferedReader( new InputStreamReader(Dictionary.getWordsAsStram()) );
 	        } catch (Exception ex) {
 	            out.println("Could not open dictionary: "+ex.getMessage());
 	            return;
 	        }
+	}
+	public void run(){
+		 
 	        
-	        long starttime = System.nanoTime();
+	        
 	        
 	        try {
 	            int count = 0;
@@ -34,7 +39,7 @@ public class Task2 implements Runnable{
 	        } finally {
 	            try { br.close(); } catch (Exception ex) { /* ignore it */ }
 	        }
-	        long stoptime = System.nanoTime();
+	        
 	        
 	}
 	public String toString(){

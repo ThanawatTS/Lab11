@@ -9,20 +9,18 @@ import java.io.InputStreamReader;
 import java.util.function.IntConsumer;;
 
 public class Task3 implements Runnable{
-
+	 BufferedReader br;
+	public Task3(){
+		br = null;
+	        try {
+	            br = new BufferedReader( new InputStreamReader(Dictionary.getWordsAsStram()) );
+	        } catch (Exception ex) {
+	            out.println("Could not open dictionary: "+ex.getMessage());
+	            return;
+	        }
+	}
 	public void run(){
 		
-        BufferedReader br = null;
-        try {
-            br = new BufferedReader( new InputStreamReader(Dictionary.getWordsAsStram()) );
-        } catch (Exception ex) {
-            out.println("Could not open dictionary: "+ex.getMessage());
-            return;
-        }
-        
-        
-        long starttime = System.nanoTime();
-        
         long totalsize = 0;
         long count = 0;
         // This code uses Java's IntStream.average() method.
@@ -40,7 +38,7 @@ public class Task3 implements Runnable{
         out.printf("Average length of %,d words is %.2f\n",
                 counter.getCount(), counter.average() );
             
-        long stoptime = System.nanoTime();
+       
        
         
 	}

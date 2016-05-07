@@ -8,19 +8,18 @@ import java.io.InputStreamReader;
 
 public class Task6 implements Runnable {
 	static final int MAXCOUNT = 50_000;
-	
-	public  void run(){
+	BufferedReader br; 
+	public Task6(){
 		 // initialize
-		  BufferedReader br = null;
+		  br = null;
 	        try {
 	            br = new BufferedReader( new InputStreamReader(Dictionary.getWordsAsStram()) );
 	        } catch (Exception ex) {
 	            out.println("Could not open dictionary: "+ex.getMessage() );
 	            return;
 	        }
-	        
-	        
-	        long starttime = System.nanoTime();
+	}
+	public  void run(){
 	        StringBuilder result = new StringBuilder();
 	        String word = null;
 	        int count = 0;
@@ -34,10 +33,6 @@ public class Task6 implements Runnable {
 	        long stoptime = System.nanoTime();
 	     
 	    }	
-	
-	
-	
-	
 	 public String toString() {
 	       return "Starting task: append "+MAXCOUNT+" words to a StringBuilder";
 	 }
